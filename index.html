@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ruhi! ❤️</title>
+    <style>
+        :root {
+            --opening-pink: #ff4d6d;
+            --romantic-red: #d90429;
+            --soft-white: #fff5f7;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            overflow-x: hidden;
+            text-align: center;
+            background-color: var(--soft-white);
+        }
+
+        /* Opening Pink Screen */
+        #intro {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff4d6d 0%, #ff85a2 100%);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            transition: all 1s ease;
+        }
+
+        #intro.hidden {
+            transform: translateY(-100vh);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .btn-reveal {
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            background: white;
+            color: var(--opening-pink);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Main Content: Hearts and Flowers Theme */
+        #mainContent {
+            display: none;
+            min-height: 100vh;
+            background: radial-gradient(circle, rgba(255,245,247,1) 0%, rgba(255,182,193,0.5) 100%),
+                        url('https://www.transparenttextures.com/patterns/hearts.png');
+            padding: 40px 20px;
+        }
+
+        .main-message {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px;
+            border-radius: 25px;
+            border: 4px double var(--opening-pink);
+            box-shadow: 0 15px 35px rgba(255, 77, 109, 0.2);
+        }
+
+        .signature { color: var(--romantic-red); font-size: 2rem; margin-top: 20px; }
+
+        /* Photo Cards */
+        .photo-card {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .photo-card img { width: 100%; border-radius: 15px; display: block; }
+
+        .love-line {
+            margin-top: 15px;
+            font-size: 1.3rem;
+            color: var(--romantic-red);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* Floating Items */
+        .floating {
+            position: fixed;
+            top: -50px;
+            z-index: 99;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall { to { transform: translateY(105vh) rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <!-- Song Link -->
+    <audio id="bdaySong" loop>
+        <source src="ammayi.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="intro">
+        <h1 style="color:white; font-size: 3rem; margin-bottom: 30px;">Hyy Ruhi, there's a surprise... 💖</h1>
+        <button class="btn-reveal" onclick="startSurprise()">Open Your Birthday Gift!</button>
+    </div>
+
+    <div id="mainContent">
+        <div class="main-message">
+            <p>happy birthday to you my little baby girl na bujimunda na mudhula pellamah na chitti shrimati na putikiiiiiii Bangaram edi manan cheskuney ni 2nd birthday last year ki Ee year ki chala marai manam kuda chala maram elaney prathi year bday luu cheskundamuuuu manam ela kalipi ni Prema tho patu ni life ni kuda na chethulo petu happy ga chuskunta namakam tho ni cheyaa echi chudu ee prapancham lo mana Prema entha important ani telidu kani Naku nuvu important ni tarvta ey emina III loveee youuuuuuu sooooo muchhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhuuuuuuuuuuuuuuuuuuuuuuuuuuu putikiiiiiii na ruhi Eyy nuvu na athamah 🫠🫴💍dha pelli cheskundam fast ga</p>
+            <h2 class="signature">Your Mogudu, Gowtham ❤️</h2>
+        </div>
+
+        <!-- Updated Photo Cards with new names -->
+        <div class="photo-card"><img src="1.jpeg"><span class="love-line">Happy birthday to my little baby girl, my Bangaram! ❤️</span></div>
+        <div class="photo-card"><img src="2.jpeg"><span class="love-line">Na bujimunda, you are the most important person in my life. 🌸</span></div>
+        <div class="photo-card"><img src="3.jpeg"><span class="love-line">Everything changed after you came into my world. ✨</span></div>
+        <div class="photo-card"><img src="4.jpeg"><span class="love-line">Prathi year bday luu elaney kalisi cheskundam. 🌹</span></div>
+        <div class="photo-card"><img src="5.jpeg"><span class="love-line">Ni Prema tho patu ni life ni na chethulo petu. 🤝</span></div>
+        <div class="photo-card"><img src="6.jpeg"><span class="love-line">Namakam tho ni cheyaa echi chudu, happy ga chuskunta. 💖</span></div>
+        <div class="photo-card"><img src="7.jpeg"><span class="love-line">I love you so muchhhhhhh putikiiiiiii! 😍</span></div>
+        <div class="photo-card"><img src="8.jpeg"><span class="love-line">Naku nuvu important, ni tarvta ey emina. 💍</span></div>
+        <div class="photo-card"><img src="9.jpeg"><span class="love-line">Dha pelli cheskundam fast ga, na Athamah! 🫠</span></div>
+        <div class="photo-card"><img src="10.jpeg"><span class="love-line">Forever yours, Your Mogudu Gowtham. ❤️</span></div>
+    </div>
+
+    <script>
+        function startSurprise() {
+            document.getElementById('bdaySong').play().catch(e => console.log("Music blocked"));
+            document.getElementById('intro').classList.add('hidden');
+            document.getElementById('mainContent').style.display = 'block';
+            setInterval(spawnItem, 300);
+        }
+
+        function spawnItem() {
+            const items = ['❤️', '💖', '🌸', '🌹', '✨'];
+            const item = document.createElement('div');
+            item.classList.add('floating');
+            item.innerHTML = items[Math.floor(Math.random() * items.length)];
+            item.style.left = Math.random() * 100 + 'vw';
+            item.style.fontSize = Math.random() * 20 + 20 + 'px';
+            item.style.animationDuration = Math.random() * 2 + 2 + 's';
+            document.body.appendChild(item);
+            setTimeout(() => item.remove(), 4000);
+        }
+    </script>
+</body>
+</html>
